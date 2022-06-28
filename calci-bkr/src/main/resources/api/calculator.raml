@@ -1,0 +1,105 @@
+#%RAML 1.0
+title: calculator
+version: v1
+protocols:
+  - HTTP
+
+/addition:
+  get:
+    queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "result": "addition is 20"
+              }
+      400:
+        body:
+          application/json:
+            example:
+              {
+                "result": "bad request"
+              }
+/subtraction:
+  patch:
+    queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "result": "sutraction is 20"
+              }
+      400:
+        body:
+          application/json:
+            example:
+              {
+                "result": "bad request"
+              }
+/multiplication:
+  patch:
+    queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "result": "multiplication is 20"
+              }
+      400:
+        body:
+          application/json:
+            example:
+              {
+                "result": "bad request"
+              }
+/division:
+  delete:
+    queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "result": "division is 20"
+              }
+      400:
+        body:
+          application/json:
+            example:
+              {
+                "result": "bad request"
+              }
+                
+                                    
+
